@@ -1,5 +1,5 @@
 class QuotesController < Rulers::Controller
   def a_quote
-    "I think therefore I am"
+    render :a_quote, :noun => :winking
   end
 end
