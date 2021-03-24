@@ -4,6 +4,11 @@ class QuotesController < Rulers::Controller
     render :index, :quotes => quotes
   end
 
+  def show
+    quote = FileModel.find(params['id'])
+    render_response :quote, :obj => quote, :ua => request.user_agent
+  end
+
   def a_quote
     render :a_quote, :noun => :winking
   end
